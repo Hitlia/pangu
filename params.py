@@ -65,13 +65,13 @@ def get_pangu_model_args():
 def get_pangu_data_args(cur_proj): 
     data_args = {
         # 数据路径
-        'root_path':            Path('/data/lxy/weather/pangu_v3/'),
-        'npy_path':             Path('/data/lhy/data/npy-data/'),
-        'tp6hr_path':           Path('/data/lhy/data/tp6hr-data/'),
+        'root_path':            Path('/pangu/'),
+        'npy_path':             Path('/npy-data/'),
+        'tp6hr_path':           Path('/tp6hr-data/'),
 
         # norm
-        'norm_path':            f"/data/lxy/weather/dataset/norms/norms.npy",
-        'diff_path':            f"/data/lxy/weather/dataset/norms/diff.npy",
+        'norm_path':            f"/dataset/norms/norms.npy",
+        'diff_path':            f"/dataset/norms/diff.npy",
 
         # log
         'train_log_path':       f"output/{cur_proj}/logs/pangu_train.log",
@@ -84,10 +84,6 @@ def get_pangu_data_args(cur_proj):
         'best_model_path':      f"output/pangu_v3_new/ckpts/pangu_best.pt",
 
         # 配置参数
-        # 'train_start_datetime': datetime(2018, 1, 1, 1),  # 起始时间
-        # 'train_end_datetime':   datetime(2018, 1, 2, 19),  # 结束时间
-        # 'valid_start_datetime': datetime(2024, 1, 1, 1),
-        # 'valid_end_datetime':   datetime(2024, 1, 2, 19),
         'train_start_datetime': datetime(2018, 1, 1, 1),  # 起始时间
         'train_end_datetime':   datetime(2023, 12, 31, 19),  # 结束时间
         'valid_start_datetime': datetime(2024, 1, 1, 1),
